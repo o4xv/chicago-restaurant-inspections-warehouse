@@ -122,4 +122,3 @@ The current dbt target creates `DBT_DEV_SILVER` and `DBT_DEV_GOLD`. If the targe
 - [`dbt/models/`](dbt/models/) — staging, Silver, and Gold models.
 - [`dbt/tests/`](dbt/tests/) — additional data-quality check.
 - [`requirements.txt`](requirements.txt) — Python package versions used for the project.
-- [`assets/`](assets/) — original and alternate diagrams for sharing the project on LinkedIn.
