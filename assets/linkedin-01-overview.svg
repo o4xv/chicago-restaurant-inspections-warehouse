@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Chicago restaurant inspections ELT project overview</title>
+  <desc id="desc">City of Chicago APIs flow through Python requests, Snowflake Bronze, and dbt Core to SQL analysis.</desc>
+  <!-- Tool logos: python.org/community/logos/; snowflake.com/en/news/ press resources; github.com/dbt-labs/dbt-styleguide. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FAFF"/>
+      <stop offset="1" stop-color="#EAF2FC"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#7892B5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1500" cy="20" r="220" fill="#DCEAFF" opacity=".65"/>
+  <text x="80" y="75" fill="#285FD2" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="3">DATA ENGINEERING PROJECT</text>
+  <text x="80" y="158" fill="#14243B" font-family="Segoe UI,Arial,sans-serif" font-size="62" font-weight="750">Chicago restaurant inspections</text>
+  <text x="80" y="223" fill="#53647D" font-family="Segoe UI,Arial,sans-serif" font-size="31">From public APIs to an analysis-ready warehouse</text>
+
+  <path d="M423 480 H442" fill="none" stroke="#7892B5" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M795 480 H814" fill="none" stroke="#7892B5" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M1167 480 H1186" fill="none" stroke="#7892B5" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="80" y="345" width="340" height="270" rx="24" fill="#FFFFFF" stroke="#D8E4F2" stroke-width="2"/>
+    <rect x="80" y="345" width="340" height="10" rx="5" fill="#2D6BE3"/>
+    <text x="108" y="416" fill="#2D6BE3" font-size="22" font-weight="700" letter-spacing="2">SOURCE</text>
+    <text x="108" y="477" fill="#14243B" font-size="35" font-weight="750">Chicago APIs</text>
+    <text x="108" y="531" fill="#53647D" font-size="24">Inspections + licenses</text>
+    <text x="108" y="574" fill="#53647D" font-size="24">2025 data</text>
+
+    <rect x="452" y="345" width="340" height="270" rx="24" fill="#FFFFFF" stroke="#D8E4F2" stroke-width="2"/>
+    <rect x="452" y="345" width="340" height="10" rx="5" fill="#16A49F"/>
+    <text x="480" y="416" fill="#11958F" font-size="22" font-weight="700" letter-spacing="2">EXTRACT</text>
+    <image href="logos/python-logo-only.svg" x="706" y="374" width="60" height="65" preserveAspectRatio="xMidYMid meet"/>
+    <text x="480" y="477" fill="#14243B" font-size="35" font-weight="750">Python</text>
+    <text x="480" y="531" fill="#53647D" font-size="24">requests + pagination</text>
+    <text x="480" y="574" fill="#53647D" font-size="24">JSONL snapshot</text>
+
+    <rect x="824" y="345" width="340" height="270" rx="24" fill="#FFFFFF" stroke="#D8E4F2" stroke-width="2"/>
+    <rect x="824" y="345" width="340" height="10" rx="5" fill="#5272DE"/>
+    <text x="852" y="416" fill="#5272DE" font-size="22" font-weight="700" letter-spacing="2">STORE</text>
+    <image href="logos/snowflake-icon.png" x="1065" y="374" width="70" height="65" preserveAspectRatio="xMidYMid meet"/>
+    <text x="852" y="477" fill="#14243B" font-size="35" font-weight="750">Snowflake</text>
+    <text x="852" y="531" fill="#53647D" font-size="24">Bronze raw JSON</text>
+    <text x="852" y="574" fill="#53647D" font-size="24">VARIANT tables</text>
+
+    <rect x="1196" y="345" width="340" height="270" rx="24" fill="#FFFFFF" stroke="#D8E4F2" stroke-width="2"/>
+    <rect x="1196" y="345" width="340" height="10" rx="5" fill="#F08A33"/>
+    <text x="1224" y="416" fill="#DA7624" font-size="22" font-weight="700" letter-spacing="2">TRANSFORM</text>
+    <image href="logos/dbt-logo-full.svg" x="1391" y="383" width="122" height="45" preserveAspectRatio="xMidYMid meet"/>
+    <text x="1224" y="477" fill="#14243B" font-size="35" font-weight="750">dbt Core</text>
+    <text x="1224" y="531" fill="#53647D" font-size="24">Silver + Gold models</text>
+    <text x="1224" y="574" fill="#53647D" font-size="24">SQL analysis</text>
+
+    <line x1="80" y1="686" x2="1536" y2="686" stroke="#CEDAE9" stroke-width="2"/>
+    <text x="80" y="756" fill="#14243B" font-size="42" font-weight="750">13,864</text>
+    <text x="80" y="798" fill="#53647D" font-size="23">inspections</text>
+    <text x="575" y="756" fill="#14243B" font-size="42" font-weight="750">17,830</text>
+    <text x="575" y="798" fill="#53647D" font-size="23">license records</text>
+    <text x="1100" y="756" fill="#14243B" font-size="42" font-weight="750">1 fact + 3 dims</text>
+    <text x="1100" y="798" fill="#53647D" font-size="23">in the Gold warehouse</text>
+    <text x="80" y="858" fill="#7A8BA1" font-size="18">City of Chicago Open Data  •  Snapshot downloaded September 25, 2026</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: chicago
+    database: CHICAGO_RESTAURANT_DB
+    schema: BRONZE
+    tables:
+      - name: INSPECTIONS_RAW
+      - name: BUSINESS_LICENSES_RAW

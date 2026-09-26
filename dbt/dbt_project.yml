@@ -1,0 +1,19 @@
+name: chicago_restaurant_inspections
+version: '1.0.0'
+config-version: 2
+
+profile: chicago_restaurant_inspections
+
+model-paths: ["models"]
+
+models:
+  chicago_restaurant_inspections:
+    staging:
+      +materialized: view
+      +schema: SILVER
+    silver:
+      +materialized: view
+      +schema: SILVER
+    marts:
+      +materialized: table
+      +schema: GOLD
