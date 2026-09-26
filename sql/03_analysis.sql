@@ -36,3 +36,22 @@ GROUP BY licenses.license_number, licenses.business_name
 HAVING COUNT_IF(inspections.result = 'Fail') > 0
 ORDER BY failed_inspections DESC, total_inspections DESC
 LIMIT 10;
+
+-- How are inspection results distributed across risk categories in 2025?
+SELECT
+    inspections.risk,
+    inspections.result,
+    COUNT(*) AS total_inspections
+FROM CHICAGO_RESTAURANT_DB.DBT_DEV_GOLD.FACT_INSPECTIONS AS inspections
+GROUP BY inspections.risk, inspections.result
+ORDER BY inspections.risk, total_inspections DESC;
+
+-- Which inspection types had the most failed inspections in 2025?
+SELECT
+    inspections.inspection_type,
+    COUNT(*) AS total_inspections,
+    COUNT_IF(inspections.result = 'Fail') AS failed_inspections
+FROM CHICAGO_RESTAURANT_DB.DBT_DEV_GOLD.FACT_INSPECTIONS AS inspections
+GROUP BY inspections.inspection_type
+ORDER BY failed_inspections DESC, total_inspections DESC
+LIMIT 10;

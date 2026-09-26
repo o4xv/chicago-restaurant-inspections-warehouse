@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Chicago restaurant inspections Gold data model</title>
+  <desc id="desc">One inspection fact table connects to date, location, and optional license-record dimensions.</desc>
+  <rect width="1600" height="900" fill="#F7F9FC"/>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; }
+    .ink { fill: #172B43; }
+    .muted { fill: #586B80; }
+    .blue { fill: #2864A6; }
+    .table-name { font-size: 36px; font-weight: 700; }
+    .detail { font-size: 25px; }
+  </style>
+
+  <text x="80" y="91" class="blue" font-size="23" font-weight="700" letter-spacing="2">GOLD DATA MODEL</text>
+  <image href="logos/dbt-logo-full.svg" x="1380" y="53" width="142" height="52" preserveAspectRatio="xMidYMid meet"/>
+  <text x="80" y="175" class="ink" font-size="62" font-weight="700">One fact. Three dimensions.</text>
+
+  <path d="M250 505 V566 H600 V610" fill="none" stroke="#8294A7" stroke-width="4"/>
+  <path d="M800 505 V610" fill="none" stroke="#8294A7" stroke-width="4"/>
+  <path d="M1350 505 V566 H1000 V610" fill="none" stroke="#8294A7" stroke-width="4"/>
+
+  <g>
+    <rect x="80" y="330" width="340" height="175" rx="14" fill="#FFFFFF" stroke="#B8CCE1" stroke-width="3"/>
+    <text x="110" y="403" class="ink table-name">dim_date</text>
+    <text x="110" y="462" class="muted detail">Calendar day</text>
+
+    <rect x="630" y="330" width="340" height="175" rx="14" fill="#FFFFFF" stroke="#B8CCE1" stroke-width="3"/>
+    <text x="660" y="403" class="ink table-name">dim_location</text>
+    <text x="660" y="462" class="muted detail">Address + ZIP</text>
+
+    <rect x="1180" y="330" width="340" height="175" rx="14" fill="#FFFFFF" stroke="#B8CCE1" stroke-width="3"/>
+    <text x="1210" y="403" class="ink" font-size="31" font-weight="700">dim_license_record</text>
+    <text x="1210" y="462" class="muted detail">Optional match</text>
+
+    <rect x="455" y="610" width="690" height="158" rx="16" fill="#1B3E68"/>
+    <text x="800" y="683" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI,Arial,sans-serif" font-size="43" font-weight="700">fact_inspections</text>
+    <text x="800" y="730" text-anchor="middle" fill="#E2EAF3" font-family="Segoe UI,Arial,sans-serif" font-size="27">13,864 rows  ·  one per inspection</text>
+  </g>
+
+</svg>

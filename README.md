@@ -74,6 +74,8 @@ The SQL queries are saved in [`sql/03_analysis.sql`](sql/03_analysis.sql).
 1. **How did inspections and `Fail` results change by month?** The 2025 data has **2,423** `Fail` results across **13,864** inspections.
 2. **Which ZIP codes had the most `Fail` results?** ZIP **60622** had **148** `Fail` results among **597** inspections.
 3. **Which matched businesses had repeated `Fail` results?** Grand Rising Cafe had **6** `Fail` results among **8** inspections.
+4. **How are inspection results distributed across risk categories?** `Risk 1 (High)` had **2,069** `Fail` results in the snapshot.
+5. **Which inspection types had the most `Fail` results?** `Canvass` had **1,385** `Fail` results.
 
 These are counts from one snapshot, not failure rates or explanations for why an inspection failed. The business query excludes inspections without a matching license record.
 
@@ -120,4 +122,4 @@ The current dbt target creates `DBT_DEV_SILVER` and `DBT_DEV_GOLD`. If the targe
 - [`dbt/models/`](dbt/models/) — staging, Silver, and Gold models.
 - [`dbt/tests/`](dbt/tests/) — additional data-quality check.
 - [`requirements.txt`](requirements.txt) — Python package versions used for the project.
-- [`assets/`](assets/) — two standalone images for sharing the project on LinkedIn.
+- [`assets/`](assets/) — original and alternate diagrams for sharing the project on LinkedIn.
